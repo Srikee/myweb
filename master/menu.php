@@ -1,6 +1,5 @@
 <div class="list-group">
-    <a href="./?page=home"
-        class="list-group-item list-group-item-action <?php if($page=="home") echo "active"; ?>">หน้าแรก</a>
+    <a href="./" class="list-group-item list-group-item-action <?php if($page=="home") echo "active"; ?>">หน้าแรก</a>
     <a href="./?page=deposit"
         class="list-group-item list-group-item-action <?php if($page=="deposit") echo "active"; ?>">ฝากเงิน</a>
     <a href="./?page=widthdraw"
