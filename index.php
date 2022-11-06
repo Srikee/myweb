@@ -1,3 +1,7 @@
+<?php
+    
+    $page = $_GET["page"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,14 +26,7 @@
                 <?php include("master/menu.php"); ?>
             </div>
             <div class="col-9">
-                <div class="card">
-                    <div class="card-header">
-                        Featured
-                    </div>
-                    <div class="card-body">
-                        AAA
-                    </div>
-                </div>
+                <?php include("pages/".$page."/view.php"); ?>
             </div>
         </div>
     </div>

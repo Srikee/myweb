@@ -1,9 +1,12 @@
 <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-        The current link item
-    </a>
-    <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-    <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-    <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-    <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+    <a href="./?page=home"
+        class="list-group-item list-group-item-action <?php if($page=="home") echo "active"; ?>">หน้าแรก</a>
+    <a href="./?page=deposit"
+        class="list-group-item list-group-item-action <?php if($page=="deposit") echo "active"; ?>">ฝากเงิน</a>
+    <a href="./?page=widthdraw"
+        class="list-group-item list-group-item-action <?php if($page=="widthdraw") echo "active"; ?>">ถอนเงิน</a>
+    <a href="./?page=check-balance"
+        class="list-group-item list-group-item-action <?php if($page=="check-balance") echo "active"; ?>">ตรวจสอบยอดเงิน</a>
+    <a href="./?page=account"
+        class="list-group-item list-group-item-action <?php if($page=="account") echo "active"; ?>">ข้อมูลสมุดบัญชี</a>
 </div>
