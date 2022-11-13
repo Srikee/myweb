@@ -1,7 +1,8 @@
 <?php
+    session_start();
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "saving";
+    $password = "123456";
     $dbname = "db_saving";
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
@@ -54,6 +55,7 @@
             $sql = "SELECT * FROM staff WHERE username='$username' AND password='$password' ";
             $result = $conn->query($sql);
             if ($result->num_rows==1) {
+                $_SESSION["auth"] = "Y";
                 header("location: ./");
             } else {
                 echo "<script>alert('Login ไม่ผ่าน Lonig ใหม่สะ!!!');</script>";

@@ -1,4 +1,11 @@
 <?php
+    session_start();
+    if( !isset($_SESSION["auth"]) ) {
+        header("location: ./login.php");
+        exit();
+    }
+
+
     if( isset($_GET["page"]) )
         $page = $_GET["page"];
     else 
