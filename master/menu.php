@@ -8,4 +8,5 @@
         class="list-group-item list-group-item-action <?php if($page=="check-balance") echo "active"; ?>">ตรวจสอบยอดเงิน</a>
     <a href="./?page=account"
         class="list-group-item list-group-item-action <?php if($page=="account") echo "active"; ?>">ข้อมูลสมุดบัญชี</a>
+    <a href="./login.php" class="list-group-item list-group-item-action">ออกจากระบบ</a>
 </div>
