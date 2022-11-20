@@ -1,5 +1,8 @@
 <?php
     session_start();
+
+    include("config/autoload.php");  // ดึงการติดต่อฐานข้อมูล
+
     if( !isset($_SESSION["auth"]) ) {
         header("location: ./login.php");
         exit();
