@@ -28,7 +28,7 @@
                                 <td>'.$row["account_name"].'</td> 
                                 <td>'.$row["account_date"].'</td>
                                 <td>
-                                    <button class="btn btn-warning">แก้ไขบัญชี</button>
+                                    <a href="./?page=account-edit&account_id='.$row["account_id"].'" class="btn btn-warning">แก้ไขบัญชี</a>
                                     <form action="" method="post" class="d-inline">
                                         <button type="submit" 
                                             name="btn-del" 

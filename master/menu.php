@@ -7,6 +7,6 @@
     <a href="./?page=check-balance"
         class="list-group-item list-group-item-action <?php if($page=="check-balance") echo "active"; ?>">ตรวจสอบยอดเงิน</a>
     <a href="./?page=account"
-        class="list-group-item list-group-item-action <?php if($page=="account" || $page=="account-add") echo "active"; ?>">ข้อมูลสมุดบัญชี</a>
+        class="list-group-item list-group-item-action <?php if($page=="account" || $page=="account-add" || $page=="account-edit") echo "active"; ?>">ข้อมูลสมุดบัญชี</a>
     <a href="./logout.php" class="list-group-item list-group-item-action">ออกจากระบบ</a>
 </div>

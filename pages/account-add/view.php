@@ -19,7 +19,7 @@
             if( isset($_POST["btn-submit"]) ) {
                 $account_id = $_POST["account_id"];
                 $account_name = $_POST["account_name"];
-                $account_date = date("Y-m-d H:m:s");
+                $account_date = date("Y-m-d H:i:s");
                 $staff_id = $_SESSION["staff_id"];
                 $sql = "
                     INSERT INTO account (
