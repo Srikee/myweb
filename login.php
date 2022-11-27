@@ -43,24 +43,17 @@
         if( isset($_POST["btn-login"]) ) {
             $username = $_POST["username"];
             $password = $_POST["password"];
-
-
             $sql = "SELECT * FROM staff WHERE username='$username' AND password='$password' ";
             $result = $conn->query($sql);
             if ($result->num_rows==1) {
+                $data = $result->fetch_assoc();
                 $_SESSION["auth"] = "Y";
+                $_SESSION["staff_id"] = $data["staff_id"];
                 header("location: ./");
             } else {
                 echo "<script>alert('Login ไม่ผ่าน Lonig ใหม่สะ!!!');</script>";
             }
             $conn->close();
-
-
-            // if( $username=="somchai" && $password=="123456" ) {
-            //     header("location: ./");
-            // } else {
-            //     echo "<script>alert('Login ไม่ผ่าน Lonig ใหม่สะ!!!');</script>";
-            // }
         }
     ?>
 </body>
