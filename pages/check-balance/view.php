@@ -62,7 +62,7 @@
         ผลการตรวจสอบยอดเงิน
     </div>
     <div class="card-body">
-        ยอดเงินคงเหลือ : <?php echo $balance; ?> บาท
+        ยอดเงินคงเหลือ : <?php echo number_format($balance, 0); ?> บาท
     </div>
 </div>
 <div class="card">
@@ -92,18 +92,18 @@
                     $num1 = "-";
                     $num2 = "-";
                     if( $list_type=="1" ) {
-                        $num1 = $row["amount"];
-                        $balance = $balance + $num1;
+                        $num1 = number_format($row["amount"],0);
+                        $balance = $balance + $row["amount"];
                     } else if( $list_type=="2" ) {
-                        $num2 = $row["amount"];
-                        $balance = $balance - $num2;
+                        $num2 = number_format($row["amount"],0);
+                        $balance = $balance - $row["amount"];
                     }
                     echo '
                         <tr>
                             <td>'.$row["list_date"].'</td>
                             <td>'.$num1.'</td>
                             <td>'.$num2.'</td>
-                            <td>'.$balance.'</td>
+                            <td>'.number_format($balance,0).'</td>
                         </tr>
                     ';
                 }
