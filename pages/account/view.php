@@ -3,7 +3,9 @@
         ข้อมูลสมุดบัญชี
     </div>
     <div class="card-body">
-        <a href="./?page=account-add" class="btn btn-success" style="margin-bottom:20px;">เพิ่มบัญชีใหม่</a>
+        <a href="./?page=account-add" class="btn btn-success" style="margin-bottom:20px;">
+            <i class="fa-solid fa-plus"></i> เพิ่มบัญชีใหม่
+        </a>
         <table class="table">
             <thead>
                 <tr>
@@ -28,14 +30,16 @@
                                 <td>'.$row["account_name"].'</td> 
                                 <td>'.$row["account_date"].'</td>
                                 <td>
-                                    <a href="./?page=account-edit&account_id='.$row["account_id"].'" class="btn btn-warning">แก้ไขบัญชี</a>
+                                    <a href="./?page=account-edit&account_id='.$row["account_id"].'" class="btn btn-warning">
+                                        <i class="fa-solid fa-pen"></i> แก้ไขบัญชี
+                                    </a>
                                     <form action="" method="post" class="d-inline">
                                         <button type="submit" 
                                             name="btn-del" 
                                             value="'.$row["account_id"].'" 
                                             class="btn btn-danger" 
                                             onclick="return confirm(\'คุณแน่ใจต้องการลบใช่หรือไม่ ?\')">
-                                            ลบบัญชี
+                                            <i class="fa-solid fa-trash"></i> ลบบัญชี
                                         </button>
                                     </form>
                                 </td>
