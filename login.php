@@ -49,7 +49,8 @@
                 $data = $result->fetch_assoc();
                 $_SESSION["auth"] = "Y";
                 $_SESSION["staff_id"] = $data["staff_id"];
-                header("location: ./");
+                // header("location: ./");
+                echo "<script>location.href='./';</script>";
             } else {
                 echo "<script>alert('Login ไม่ผ่าน Lonig ใหม่สะ!!!');</script>";
             }
